@@ -45,7 +45,7 @@ class ClassSchedulePage extends StatelessWidget {
                       Text("akshs"),
                     ),
                     DataCell(
-                      Text("akshs"),
+                      Text("kajsdlaksj"),
                     ),
                     DataCell(
                       Text("akshs"),
