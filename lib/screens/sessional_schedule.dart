@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class ClassSchedulePage extends StatelessWidget {
+class SessionalSchedulePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Time Table"),
+        title: Text("Sessional"),
       ),
       body: Container(
         height: mediaQuery.height * 0.3,

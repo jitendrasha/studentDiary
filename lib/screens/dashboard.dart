@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutterapp/screens/sessional_schedule.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutterapp/bloc/authentication/authentication_bloc.dart';
 import 'package:flutterapp/bloc/authentication/authentication_event.dart';
@@ -78,6 +79,15 @@ class DashBoard extends StatelessWidget {
               title: Text("Result"),
             ),
             ListTile(
+               onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SessionalSchedulePage(),
+                  ),
+                );
+              },
               title: Text("Schedule"),
             ),
             ListTile(
