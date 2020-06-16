@@ -6,6 +6,8 @@ import 'package:flutterapp/bloc/pdf/bloc.dart';
 import 'package:flutterapp/models/subjects_model.dart' show Subject;
 import 'package:flutterapp/screens/pdf_screen.dart';
 import 'package:flutterapp/services/user_repository.dart';
+import 'package:flutterapp/widgets/videoplayerwidget.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class SubjectPage extends StatelessWidget {
   final Subject subject;
@@ -163,6 +165,11 @@ class SubjectPage extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Text("No Book Found"),
+                ),
+                //todo: implement videos
+                Container(
+                  height:300,
+                  child: VideoPlayer(),
                 ),
               Padding(
                 padding: const EdgeInsets.all(18.0),
