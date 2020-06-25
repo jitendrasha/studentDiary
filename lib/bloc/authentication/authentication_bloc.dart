@@ -37,6 +37,7 @@ class AuthenticationBloc
       final isSignedIn = await _userRepository.isSignedIn();
       if (isSignedIn) {
        final  user = await _userRepository.getCurrentUser();
+
   final userDetails = await _userRepository.getCurrentUserDetail(user.uid);
     yield Authenticated(userDetails);
       } else {
@@ -49,6 +50,8 @@ class AuthenticationBloc
 
   Stream<AuthenticationState> _mapLoggedInToState() async* {
    final  user = await _userRepository.getCurrentUser();
+  //  final role = await _userRepository.getRoleId();
+
   final userDetails = await _userRepository.getCurrentUserDetail(user.uid);
     yield Authenticated(userDetails);
   }

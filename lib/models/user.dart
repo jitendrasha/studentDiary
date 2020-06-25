@@ -12,11 +12,13 @@ class UserModel {
   final String email;
   final String image;
   final String homeAddress;
+  final String roleId;
 
   UserModel(
       {this.fatherName,
       this.mobileNumber,
       this.name,
+      this.roleId,
       this.motherName,
       this.course,
       this.rollNo,
@@ -35,6 +37,7 @@ class UserModel {
       motherName: doc.data["motherName"],
       name: doc.data["name"],
       rollNo: doc.data["rollNo"],
+      roleId: doc.data['roleId'],
       userId: doc.data["userId"]);
 
   @override
