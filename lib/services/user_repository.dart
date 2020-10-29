@@ -29,6 +29,22 @@ class UserRepository {
   String get userId => this._userId;
 
 
+void playingWithDb() async{
+  var db1=Firestore.instance.collection("newUser");
+  db1.document("lull").setData({"looooolllll":1234567890});
+
+}
+
+
+
+
+
+
+
+
+
+
+
 //! login kra rhe h user ko with credentials
   Future<FirebaseUser> signInWithCredentials(
       String email, String password) async {
@@ -92,11 +108,11 @@ class UserRepository {
 //* faltu function
   Future<String> getRoleId()async{
       final user =  await _firebaseAuth.currentUser();
-      var data = await  db.collection('user').document(user.uid).get();
+      var document = await  db.collection('user').document(user.uid).get();
     
-      print(data.data);
+      print(document.data);
       print(user.uid);
-    return data.data["roleId"];
+    return document.data["roleId"];
   }
 
 //! yaha hum user id return kr rhe h

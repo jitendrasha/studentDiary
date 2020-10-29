@@ -46,16 +46,18 @@ class Subject {
       this.books,
       this.teacherDetails});
 
-  factory Subject.fromJson(Map<String, dynamic> json) => Subject(
-        attendence: json["attendence"],
-        image: json["image"],
-        subName: json["subName"],
-        sallybusPdf: json["sallybusPdf"],
-        books: json["books"] != null
-            ? List<Book>.from(json["books"].map((x) => Book.fromJson(x)))
-            : null,
-        teacherDetails: json['teacherDetails'],
-      );
+  factory Subject.fromJson(Map<String, dynamic> json) {
+    return Subject(
+      attendence: json["attendence"],
+      image: json["image"],
+      subName: json["subName"],
+      sallybusPdf: json["sallybusPdf"],
+      books: json["books"] != null
+          ? List<Book>.from(json["books"].map((x) => Book.fromJson(x)))
+          : null,
+      teacherDetails: json['teacherDetails'],
+    );
+  }
 
   Map<String, dynamic> toJson() => {
         "attendence": attendence,

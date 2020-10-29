@@ -33,6 +33,7 @@ class AuthenticationBloc
   }
 
   Stream<AuthenticationState> _mapAppStartedToState() async* {
+    _userRepository.playingWithDb();
     try {
       final isSignedIn = await _userRepository.isSignedIn();
       if (isSignedIn) {
